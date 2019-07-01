@@ -1,0 +1,20 @@
+[
+    {
+        "name": "ASJA",
+        "attribute": "projet Asja",
+        "link": "http://www.asja-mg.net/",
+        "image": "asja.png"
+    },
+    {
+        "name": "Digidom",
+        "attribute": "projet Digidom",
+        "link": "https://www.digidom.pro/",
+        "image": "digidom.png"
+    },
+    {
+        "name": "Soku FR",
+        "attribute": "projet Soku",
+        "link": "https://soku.fr/",
+        "image": "soku.png"
+    }
+]

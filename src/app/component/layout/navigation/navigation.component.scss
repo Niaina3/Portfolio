@@ -1,0 +1,70 @@
+ul li a:hover, .activeNavbar {
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999;
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+
+    .facebook {
+        background: #3B5998;
+        color: white;
+    }
+      
+    .twitter {
+        background: #55ACEE;
+        color: white;
+    }
+      
+    .github {
+        background: #353b48;
+        color: white;
+    }
+      
+    .linkedin {
+        background: #007bb5;
+        color: white;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    border-radius: 30px;
+    transition: all .2s ease-in-out;
+    z-index: 9999;
+}
+
+.show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}

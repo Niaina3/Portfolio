@@ -1,0 +1,14 @@
+.view {
+    height: 100vh;
+    margin-top: 60px;
+}
+
+h1 {
+    &:hover {
+        color: #3498db;
+    }    
+}
+
+h3 {
+    @extend h1;
+}

@@ -1,0 +1,133 @@
+$borderWidth: 7px;
+$animationTime: 1.5s;
+$border-color-default: #eee;
+$border-color-fill: #3498db;
+$size: 100px;
+
+$howManySteps: 10;
+
+hr.competences {
+  width: 40px;
+  border: 2px solid #3498db;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  background: none;
+  box-shadow: none;
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: $borderWidth solid $border-color-default;
+    position: absolute;
+  }
+  > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .progress-left {
+    left: 0;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: $borderWidth;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: $border-color-fill;
+  }
+  .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: ($size/2);;
+    border-bottom-right-radius: ($size/2);;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  .progress-right {
+    right: 0;
+    .progress-bar {
+      left: -100%;
+      border-top-left-radius: ($size/2);;
+      border-bottom-left-radius: ($size/2);;
+      border-right: 0;
+      -webkit-transform-origin: center right;
+      transform-origin: center right;
+    }
+  }
+  .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
+    span {
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@for $i from 1 through $howManySteps {
+    $stepName: ($i*(100 / $howManySteps));
+
+    @if $i <= ($howManySteps/2) { 
+        .progress[data-percentage="#{$stepName}"] {
+            .progress-right .progress-bar {
+                 animation: loading-#{$i} $animationTime linear forwards;
+            }
+            .progress-left .progress-bar {animation: 0;}
+        }
+    }
+    @if $i > ($howManySteps/2)  {  
+        .progress[data-percentage="#{$stepName}"] {
+            .progress-right .progress-bar {
+                animation: loading-#{($howManySteps/2)} $animationTime linear forwards; 
+            }
+            .progress-left .progress-bar {
+      animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $animationTime;
+    }
+        }
+    }
+}
+
+@for $i from 1 through ($howManySteps/2) { 
+    $degrees: (180/($howManySteps/2));
+    $degrees: ($degrees*$i);
+    @keyframes loading-#{$i}{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate($degrees);
+            transform: rotate(#{$degrees}deg);
+    }
+    }
+}
+
+div > p {
+  color: #fff;
+}
+
+img {
+  width: 50px;
+}

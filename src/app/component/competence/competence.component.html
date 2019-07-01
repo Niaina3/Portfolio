@@ -1,0 +1,74 @@
+<section class="section pt-5" id="competence">
+    <div class="container">
+        <div class="header text-center">
+            <h2 class="h2-responsive display-3 pt-5 font-weight-bold"> MES COMPÉTENCES</h2>
+            <p class=" px-5 lead grey-text text-body">Des compétences à votre service</p>
+            <hr class="competences">
+        </div>
+        
+        <div class="row mx-auto">
+            <div *ngFor="let competence of competences" class="col-6 col-sm-3 pt-5">
+                <div class="progress mx-auto" [attr.data-percentage]="competence.level">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                        <div>
+                            {{ competence?.level }}%<br>
+                            <span>{{ competence?.name }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+<section class="my-5 py-5 blue light-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 my-3 wow fadeInLeft" data-wow-delay="0.6s">
+                <div class="card px-5 py-3 align-items-center">
+                        <img class="my-4" src="assets/images/logo/agile.svg" alt=""/>
+                        <h4 class="h4-responsive display-3 font-weight-bold text-center">Compétences</h4>
+                        <hr class="hr-light my-2">
+                        <div>
+                            <p class="text-body">
+                                Développement Front-End et Back-End, Responsive Design, UI Design (web et mobile), Intégration de newsletters (SendinBlue, ...), ZOHO CRM
+                            </p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 my-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="card px-5 py-3 align-items-center">
+                        <img class="my-4" src="assets/images/logo/projet.svg" alt=""/>
+                        <h4 class="h4-responsive display-3 font-weight-bold text-center">Outils</h4>
+                        <hr class="hr-light my-2">
+                        <div>
+                            <p class="text-body">
+                                Suite Adobe (Photoshop, Illustrator, After effect, ...), Gimp, Environnements Windows, Linux et Mac OS, Virtual Machine
+                            </p>
+                        </div>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-4 my-3 wow fadeInRight" data-wow-delay="0.6s">
+                <div class="card px-5 py-3 align-items-center">
+                        <img class="my-4" src="assets/images/logo/conseil.svg" alt=""/>
+                        <h4 class="h4-responsive display-3 font-weight-bold text-center">Savoir-être</h4>
+                        <hr class="hr-light my-2">
+                        <div>
+                            <p class="text-body">
+                                Dynamique, proactive, curieuse, à l’écoute, appliquée, et surtout, passionnée par mon métier !
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

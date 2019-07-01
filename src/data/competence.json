@@ -1,0 +1,34 @@
+[
+    {
+        "name": "HTML / CSS",
+        "level": "80"
+    },
+    {
+        "name": "JQUERY",
+        "level": "60"
+    },
+    {
+        "name": "BOOTSTRAP",
+        "level": "70"
+    },
+    {
+        "name": "PHP / MYSQL",
+        "level": "80"
+    },
+    {
+        "name": "NODE JS",
+        "level": "80"
+    },
+    {
+        "name": "ANGULAR",
+        "level": "70"
+    },
+    {
+        "name": "MONGO DB",
+        "level": "80"
+    },
+    {
+        "name": "JAVA",
+        "level": "80"
+    }
+]
